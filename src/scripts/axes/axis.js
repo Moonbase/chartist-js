@@ -50,9 +50,8 @@
         labelLength = projectedValues[index + 1] - projectedValue;
       } else {
         // If we don't have a label ahead and we have only two labels in total, we just take the remaining distance to
-        // on the whole axis length. We limit that to a minimum of 30 pixel, so that labels close to the border will
-        // still be visible inside of the chart padding.
-        labelLength = Math.max(this.axisLength - projectedValue, 30);
+        // on the whole axis length.
+        labelLength = this.axisLength - projectedValue;
       }
 
       // Skip grid lines and labels where interpolated label values are falsey (execpt for 0)
